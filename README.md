@@ -1,9 +1,9 @@
 
 1.  backingservice是ldp平台给予kubernetes/openshift定制开发，
 因此只能通过ldp平台客户端工具登陆平台后使用
-```
-oc login
-```
+    ```
+    oc login
+    ```
 1.  查看可以使用的backingservice
 ```
 oc get bs -n openshift
