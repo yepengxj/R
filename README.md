@@ -89,13 +89,14 @@
     library(ggplot2)
     library("scales")
     library("reshape”)
-    #oc
-    #通过DATAFoundry backingservice活取共享数据
+
+    #通过DATAFoundry backingservice获取共享数据
     env <- system2("env",stdout = T)
     BSI_MYMONGODB_USERNAME <-strsplit( env[grep("^BSI_MYMONGODB_USERNAME",env)],"=")[[1]][2]
     BSI_MYMONGODB_PASSWORD <-strsplit( env[grep("^BSI_MYMONGODB_PASSWORD",env)],"=")[[1]][2]
     BSI_MYMONGODB_HOST     <-strsplit( env[grep("^BSI_MYMONGODB_HOST",env)],"=")[[1]][2]
     BSI_MYMONGODB_PORT     <-strsplit( env[grep("^BSI_MYMONGODB_PORT",env)],"=")[[1]][2]
+
     #获取共享数据
     shared_data_uri <- paste0("mongodb://",BSI_MYMONGODB_USERNAME,
                               ":",BSI_MYMONGODB_PASSWORD,
@@ -103,8 +104,12 @@
                               ":",BSI_MYMONGODB_PORT,
                               "/aqi_demo")
     con <- mongo(collection = "mtcar", url = shared_data_uri)
+    #查看共享数据的数据量
     con$count()
+    #查看共享数据的数据内容
     mtcars_demo<-con$find()
+
+    #进行数据分析
     mtcars_demo$carname <- rownames(mtcars_demo)
     mtcars_demo.m<- melt(mtcars_demo)
     mtcars_demo.m<- ddply(mtcars_demo.m, .(variable), transform,
@@ -120,4 +125,5 @@
       theme(legend.position = "none",
             axis.ticks = element_blank(),
             axis.text.x = element_text(size = base_size*1.5 , angle = 0, hjust = 0, colour = "grey50"))
+
     ```  
