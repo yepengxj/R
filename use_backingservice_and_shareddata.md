@@ -66,7 +66,7 @@
 1. 使用`ShareandCommon`计划创建backingservice实例  
 
     ```  
-    ./oc new-backingserviceinstance mymongodb --backingservice_name=MongoDB  --planid=257C6C2B-A376-4551-90E8-82D4E619C852
+    oc new-backingserviceinstance mymongodb --backingservice_name=MongoDB  --planid=257C6C2B-A376-4551-90E8-82D4E619C852
     Backing Service Instance has been created.
     ```  
 1. 启动Rstudio应用  
@@ -88,7 +88,7 @@
     library(plyr)
     library(ggplot2)
     library("scales")
-    library("reshape”)
+    library("reshape")
 
     #通过DATAFoundry backingservice获取共享数据
     env <- system2("env",stdout = T)
