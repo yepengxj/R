@@ -9,6 +9,7 @@
     oc get bs -n openshift  
     ```  
 1. 获取backingservice plan id  
+
     ```  
     oc describe bs MongoDB -n openshift  
     Name:			MongoDB  
