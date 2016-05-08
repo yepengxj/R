@@ -4,7 +4,7 @@ library(plyr)
 library(ggplot2)
 library("scales")
 library("reshape”)
-#oc
+
 #通过DATAFoundry backingservice活取共享数据
 env <- system2("env",stdout = T)
 BSI_MYMONGODB_USERNAME <-strsplit( env[grep("^BSI_MYMONGODB_USERNAME",env)],"=")[[1]][2]
