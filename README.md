@@ -9,7 +9,7 @@
     oc get bs -n openshift  
     ```  
 1. 获取backingservice plan id  
-    ```
+    ```  
     oc describe bs MongoDB -n openshift  
     Name:			MongoDB  
     Created:		3 weeks ago  
@@ -66,7 +66,7 @@
     Backing Service Instance has been created.
     ```  
 1. 启动Rstudio应用  
-    ```
+    ```  
     oc run rstudio --image=registry.dataos.io/guestbook/rstudio
     oc expose dc rstudio
     oc expose svc rstudio
