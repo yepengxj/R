@@ -9,12 +9,6 @@
 1.  使用web浏览器登陆rstudio route地址执行如下代码
 
     ```  
-    #总体演示流程  
-    #登录datahu
-    #拉取已订阅数据
-    #通过R语言进行二次分析
-    #通过DATAFoundry backinservice保存二次分析结果
-    #通过DATAFoundry backinservice活取共享数据
     #登录datahub
 
     system("datahub_login datahub_username datahub_password")
