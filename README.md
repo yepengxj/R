@@ -4,3 +4,4 @@
 
 ## pull_data_from_datahub.md
 演示如何使用集成在datafoundry平台中datahub客户端获取已订购的数据并使用
+因此只能通过ldp平台客户端工具登陆平台后使用  
