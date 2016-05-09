@@ -73,7 +73,7 @@
 
     ```  
     oc run rstudio --image=registry.dataos.io/guestbook/rstudio
-    oc expose dc rstudio
+    oc expose dc rstudio --port=8787
     oc expose svc rstudio
     ```  
 1. 将backingservcie实例mymongodb和Rstudio应用绑定  
