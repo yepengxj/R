@@ -3,7 +3,7 @@
 
     ```  
     oc run rstudio --image=registry.dataos.io/guestbook/rstudio
-    oc expose dc rstudio
+    oc expose dc rstudio --port=8787
     oc expose svc rstudio
     ```
 1.  使用web浏览器登陆rstudio route地址执行如下代码
