@@ -73,7 +73,7 @@
 
     ```  
     oc run rstudio --image=registry.dataos.io/guestbook/jupyter --env GRANT_SUDO=true
-    oc expose dc jupyter
+    oc expose dc jupyter  --port=8888
     oc expose svc jupyter
     ```  
 1. 将backingservcie实例mymongodb和jupyter应用绑定  
