@@ -3,7 +3,7 @@
 
     ```  
     oc run jupyter --image=registry.dataos.io/guestbook/jupyter --env GRANT_SUDO=TRUE
-    oc expose dc jupyter
+    oc expose dc jupyter --port=8888
     oc expose svc jupyter
     ```
 1.  使用web浏览器登陆jupyter route地址，新建python notebook并执行如下代码,
