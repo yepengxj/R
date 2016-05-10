@@ -85,8 +85,8 @@
 
     ```  
     def del_mongo_id(mongo_doc):
-    del mongo_doc['_id']
-    return mongo_doc
+        del mongo_doc['_id']
+        return mongo_doc
 
     #连接mongo backingservice
     #获取连接信息
